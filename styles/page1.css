@@ -5,9 +5,9 @@
 }
 
 body {
-    background-color: white;
-    width: 80%;
+    width: min(800px, 100vw);
     margin: auto;
+    background-color:rgb(201, 203, 206);
 }
 
 header {
@@ -139,15 +139,23 @@ p {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    font-size: 0.9em
 }
 
 .indent {
     text-indent: 1.2em;
 }
 
-.owl1 {
+/* .owl1 {
     width: 94%;
     margin: 1em;
+} */
+
+.owl1 {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    background-color: white;
 }
 
 /* Right Column */
@@ -156,9 +164,14 @@ p {
     flex-direction: column;
 }
 
+.monkey {
+    padding: 1em 0 1em 1em;
+    background-color: white;
+}
+
 .monkey img {
-    width: 95.5%;
-    margin: 1em 1em;
+    display: block;
+    width: 100%;
 }
 
 figcaption, .pure-u-2-5 p {
@@ -166,14 +179,14 @@ figcaption, .pure-u-2-5 p {
 }
 
 figcaption {
-    font-size: 0.8em;
+    font-size: 0.7em;
     line-height: 1.2em;
     margin-bottom: 1em;
 }
 
 .pure-u-2-5 .blue {
     border-top: solid black 1px;
-    border-bottom: none;
+    border-bottom: none;    
     flex-grow: 1;
 }
 
@@ -184,4 +197,70 @@ footer {
     text-align: center;
     background-color: #d8d1e9;
     border-top: solid black 1px;
+}
+
+@media (max-width: 799px) {
+
+    .article-title {
+        font-size: 2.5rem;
+        gap: 1rem;
+    }
+
+}
+
+@media (max-width: 659px) {
+
+    body {
+    width: min(475px, 100vw);
+    }
+
+    .article-title {
+        font-size: 1.8rem;
+    }
+
+    .pure-u-3-5,
+    .pure-u-2-5 {
+        width: 100% !important;
+    }
+
+    .pure-u-3-5 {
+        border-right: none;
+        border-bottom: solid black 1px;
+    }
+
+    .monkey {
+        padding: 1em;
+    }
+
+    figcaption, .pure-u-2-5 p {
+    width: 100%;
+    }
+
+}
+
+@media (max-width: 475px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: .75em;
+        border-bottom: solid 1px #ddd;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    body {
+        transform: scale(1.1);
+        transform-origin: top center;
+    }
+}
+
+@media (min-width: 1400px) {
+    body {
+        transform: scale(1.25);
+        transform-origin: top center;
+    }
 }
